@@ -1,2 +1,2 @@
 # subRegexSS
-Paste text with Social Security or Credit Card information for it to be Replaced with X
+Try out possible passwords. Needs at least 8 characters, both uppercase and lowercase, and at least one digit. Can have special characters
