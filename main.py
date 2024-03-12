@@ -51,10 +51,14 @@ def newPassword():
 
 def main():
 
+  print("Password must have lowercase, uppercase, and at least one digit.")
+  print("Special characters such as .$!@+&%# are allowed but not required")
   finalPassword = input("Please enter possible password: ")
 
+  #will continue to run as long as password not valid
   while not validatePassword(finalPassword):
     print("ERROR: Password does not match requirements.")
+    #user option
     user = input("Type 'y' if you want to try another password, type 'n' if you want one made for you: ")
     if user == 'y' or user == 'Y':
       finalPassword = input("Please enter possible password: ")
