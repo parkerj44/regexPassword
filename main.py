@@ -44,7 +44,7 @@ def newPassword():
   length = random.randint(8, 15)
 
   #adding random characters from possibleCharacters length amount of times
-  password = ''.join(secrets.choice(possibleCharacters for i in range(length + 1)))
+  password = ''.join(secrets.choice(possibleCharacters) for i in range(length + 1))
   password = checkReq(password)
 
   return password
@@ -54,6 +54,7 @@ def main():
   finalPassword = input("Please enter possible password: ")
 
   while not validatePassword(finalPassword):
+    print("ERROR: Password does not match requirements.")
     user = input("Type 'y' if you want to try another password, type 'n' if you want one made for you: ")
     if user == 'y' or user == 'Y':
       finalPassword = input("Please enter possible password: ")
@@ -61,4 +62,6 @@ def main():
       finalPassword = newPassword()
 
   print("SUCCESS: Your new password is {}".format(finalPassword))
+
+main()
       
